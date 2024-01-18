@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components {
+  .sh {
+    @apply rounded-b-lg shadow-md;
+  }
+}
+.shadow1 {
+  box-shadow: 30px 30px grey;
+}
+
+.shadow2 {
+  box-shadow: -30px 30px grey;
+}
+
+/* @layer components {
+  .shaa {
+    @apply sm: shadow2;
+  }
+} */
+/* .select2-dropdown {
+  @apply sm: shadow2;
+} */

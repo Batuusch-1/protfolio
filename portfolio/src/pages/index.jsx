@@ -12,15 +12,11 @@ import {
 export default function Home() {
   return (
     <div className="flex justify-center">
-      <div className="container bg-blue-200">
+      <div className="container">
         <Header />
         <Profile />
-        <About />
-        <Skills />
-        <Experience />
-        <Work />
-        <GetInTouch />
-        <Footer />
+        <About/>
+        <Skills/>
       </div>
     </div>
   );
