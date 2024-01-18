@@ -9,7 +9,7 @@ export const Skills = () => {
     "/icon-nest.png",
     "/icon-socket.png",
   ];
-  const arr2 =[
+  const arr2 = [
     "/icon-postgresql.png",
     "/Tech.png",
     "/icon-sass.png",
@@ -18,7 +18,27 @@ export const Skills = () => {
     "/icon-cypress.png",
     "/icon-storybook.png",
     "/git-logo.png",
-  ]
+  ];
+  const arr3 = [
+    "Javacript",
+    "Typescript",
+    "React",
+    "NEXT.JS",
+    "NODE.JS",
+    "Express.js",
+    "Nest.js",
+    "Socket.js",
+  ];
+  const arr4 = [
+    "PostgreSQL",
+    "MongoDB",
+    "Sass/Scss",
+    "Tailwindcss",
+    "Cypress",
+    "Story book",
+    "Git",
+  ];
+
   return (
     <div className="container flex justify-center py-5">
       <div className="w-3/4">
@@ -28,17 +48,21 @@ export const Skills = () => {
           </span>
         </div>
         <div className="w-full flex justify-center ">
-          <p className=" text-2xl p-5">The skills, tools and technologies I am really good at:</p>
+          <p className=" text-2xl p-5">
+            The skills, tools and technologies I am really good at:
+          </p>
         </div>
-        <div className="w-full h-40 flex gap-16 flex-wrap justify-center py-10">
-          {arr.map((el) => (
-            <img src={el} alt="" className="w-20 h-20" />
-          ))}
-        </div>
-        <div className="w-full h-40 flex gap-16 flex-wrap justify-center py-10">
-          {arr2.map((el) => (
-            <img src={el} alt="" className="w-20 h-20" />
-          ))}
+        <div>
+          <div className="w-full h-40 flex gap-16 flex-wrap justify-center py-10">
+            {arr.map((el) => (
+              <img src={el} alt="" className="w-20 h-20" />
+            ))}
+          </div>
+          <div className="w-full  flex gap-20  justify-center ">
+            {arr3.map((el) => (
+              <p>{el}</p>
+            ))}
+          </div>
         </div>
       </div>
     </div>
