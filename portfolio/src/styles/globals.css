@@ -7,11 +7,11 @@
   }
 }
 .shadow1 {
-  box-shadow: 30px 30px grey;
+  box-shadow: 30px 30px rgba(128, 128, 128, 1);
 }
 
 .shadow2 {
-  box-shadow: -30px 30px grey;
+  box-shadow: -30px 30px rgba(128, 128, 128, 1);
 }
 
 /* @layer components {

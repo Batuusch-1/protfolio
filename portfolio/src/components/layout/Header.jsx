@@ -1,6 +1,6 @@
 export const Header = () => {
   return (
-    <div className="w-full flex justify-center">
+    <div className="w-full flex justify-center ">
     <div className=" flex justify-between w-3/4 py-10">
       <div className=" text-2xl"> SS </div>
       <div className=" flex justify-around w-2/4 ">

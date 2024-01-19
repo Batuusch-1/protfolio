@@ -15,8 +15,12 @@ export default function Home() {
       <div className="container">
         <Header />
         <Profile />
-        <About/>
-        <Skills/>
+        <About />
+        <Skills />
+        <Experience />
+        <Work />
+        <GetInTouch/>
+        <Footer/>
       </div>
     </div>
   );
