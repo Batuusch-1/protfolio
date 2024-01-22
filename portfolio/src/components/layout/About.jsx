@@ -1,24 +1,38 @@
-export const About = () => {
+
+export const About = (props) => {
   return (
     <div className="container flex justify-center py-5 bg-gray-100">
-      <div className="w-3/4 ">
-        <div className="w-full flex justify-center py-20">
-          <span className=" bg-gray-400 w-auto rounded-3xl px-3 py-1 ">
+      <div className="w-3/4">
+        <div  className="w-full flex justify-center py-20">
+          <span  className=" bg-gray-400 w-auto rounded-3xl px-3 py-1 ">
             About me
           </span>
         </div>
-        <div className="flex gap-40">
+        <div className="xl:flex sm:gap-40 ">
           <div>
-            <img src="/Pic.png" alt="" className="shadow2 w-4/4" />
+            <img
+              src="/Pic.png"
+              alt=""
+              className="shadow2  w-3/4 ml-14 lg:w-4/4 sm:1/4"
+            />
           </div>
-          <div className="w-2/4 *:p-2">
+
+          <div className="sm:w-4/4 *:p-2 py-14 sm:py-10 xl:w-2/4 xl:py-0">
             <h1>Curious about me? Here you have it:</h1>
             <p>
-              I'm a passionate, self-proclaimed designer who specializes in full
-              stack development (React.js & Node.js). I am very enthusiastic
-              about bringing the technical and visual aspects of digital
-              products to life. User experience, pixel perfect design, and
-              writing clear, readable, highly performant code matters to me.
+              I'm a passionate,{" "}
+              <a
+                href="https://tailwindcss.com/docs/responsive-design"
+                target="_blank"
+                className=" underline underline-offset-1"
+              >
+                self-proclaimed
+              </a>{" "}
+              designer who specializes in full stack development (React.js &
+              Node.js). I am very enthusiastic about bringing the technical and
+              visual aspects of digital products to life. User experience, pixel
+              perfect design, and writing clear, readable, highly performant
+              code matters to me.
             </p>
             <p>
               I began my journey as a web developer in 2015, and since then,

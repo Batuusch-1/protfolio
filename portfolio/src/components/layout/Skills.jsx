@@ -33,8 +33,8 @@ export const Skills = () => {
             The skills, tools and technologies I am really good at:
           </p>
         </div>
-        <div>
-          <div className="w-full h-40 flex gap-16 flex-wrap justify-center py-10">
+        <div className="flex flex-col">
+          <div className="w-full flex gap-16 flex-wrap justify-center py-10">
             {arr.map((el) => (
               <div>
                 {" "}
@@ -42,9 +42,9 @@ export const Skills = () => {
               </div>
             ))}
           </div>
-          <div className="w-full flex gap-16 flex-wrap justify-center py-10 ">
+          <div className="w-full flex gap-16 flex-wrap justify-center py-10">
             {arr2.map((el) => (
-              <div>
+              <div className=""> 
                 {" "}
                 <img src={el.name} alt="" className="py-2"/> {el.name1}
               </div>

@@ -43,7 +43,7 @@ export const Experience = () => {
         </div>
         <div>
           {arr.map((el) => (
-            <div className="flex bg-white  justify-around m-14 py-5 rounded-lg shadow-xl ">
+            <div className="sm:flex bg-white  justify-around m-14 sm:py-5 rounded-lg shadow-xl  p-2 ">
               <div>
                 <img src={el.logo} alt="" className="py-2" />{" "}
               </div>

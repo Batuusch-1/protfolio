@@ -17,10 +17,8 @@ export const Grey = () => {
     icon: "/sahre.png",
   };
   return (<div>
-    <div className="flex gap-24 py-5">
-      
-      <img src="/Picture.png" alt="" className="p-2 bg-gray-100"/>
-      
+    <div className="xl:flex gap-24 py-5 ">
+      <img src="/Picture.png" alt="" className="p-2 bg-gray-100 lg:ml-28 2xl:ml-0"/>
       <div>
          <h1 className=" text-3xl">Fiskil</h1>
          <p className="w-full text-xl py-5 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
@@ -31,7 +29,7 @@ export const Grey = () => {
         <img src="/sahre.png" alt=""  className="py-5"/>
       </div>
     </div>
-    <div className="flex gap-24 py-5">
+    <div className="xl:flex gap-24 py-5">
       <div>
          <h1 className=" text-3xl">Fiskil</h1>
          <p className="w-full text-xl py-5 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
@@ -41,10 +39,10 @@ export const Grey = () => {
         ))}</div>
         <img src="/sahre.png" alt=""  className="py-5"/>
       </div>
-      <img src="/Picture.png" alt=""  className="p-2 bg-gray-100"/>
+      <img src="/Picture.png" alt=""  className="p-2 bg-gray-100 lg:ml-28 2xl:ml-0"/>
     </div>
-    <div className="flex gap-24 py-5">
-      <img src="/Picture.png" alt="" className="p-2 bg-gray-100"/>
+    <div className="xl:flex gap-24 py-5">
+      <img src="/Picture.png" alt="" className="p-2 bg-gray-100 lg:ml-28 2xl:ml-0"/>
       <div>
          <h1 className=" text-3xl">Fiskil</h1>
          <p className="w-full text-xl py-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>

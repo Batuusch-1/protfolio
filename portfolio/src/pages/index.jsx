@@ -10,13 +10,14 @@ import {
 } from "@/components/layout";
 
 export default function Home() {
+  
   return (
     <div className="flex justify-center">
       <div className="container">
         <Header />
         <Profile />
         <About />
-        <Skills />
+        <Skills ></Skills>
         <Experience />
         <Work />
         <GetInTouch/>
