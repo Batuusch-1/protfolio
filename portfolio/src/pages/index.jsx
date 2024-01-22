@@ -8,20 +8,24 @@ import {
   GetInTouch,
   Footer,
 } from "@/components/layout";
-
+import { useRef } from "react";
 export default function Home() {
-  
+  const ref = useRef(null);
+  const handleClick = () => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+    console.log(ref);
+  };
   return (
     <div className="flex justify-center">
       <div className="container">
-        <Header />
+        <Header handleClick={handleClick} />
         <Profile />
-        <About />
-        <Skills ></Skills>
+        <About ref={ref} />
+        <Skills/>
         <Experience />
         <Work />
-        <GetInTouch/>
-        <Footer/>
+        <GetInTouch />
+        <Footer />
       </div>
     </div>
   );
