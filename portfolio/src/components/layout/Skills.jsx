@@ -1,4 +1,4 @@
-export const Skills = () => {
+export const Skills = (props) => {
   const arr = [
     { name: "/icon-javscript.png", name1: "Java script" },
     { name: "/icon-typescript.png", name1: "Type cript" },
@@ -21,7 +21,7 @@ export const Skills = () => {
   ];
 
   return (
-    <div className="container flex justify-center py-5">
+    <div ref={props.a} className="container flex justify-center py-5">
       <div className="w-3/4">
         <div className="w-full flex justify-center py-10">
           <span className=" bg-gray-400 w-auto rounded-3xl px-4 py-1 ">
@@ -44,9 +44,9 @@ export const Skills = () => {
           </div>
           <div className="w-full flex gap-16 flex-wrap justify-center py-10">
             {arr2.map((el) => (
-              <div className=""> 
+              <div className="">
                 {" "}
-                <img src={el.name} alt="" className="py-2"/> {el.name1}
+                <img src={el.name} alt="" className="py-2" /> {el.name1}
               </div>
             ))}
           </div>

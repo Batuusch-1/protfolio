@@ -29,7 +29,7 @@ export const Experience = (props) => {
     },
   ];
   return (
-    <div
+    <div ref={props.a}
       className="container flex justify-center py-5 bg-gray-100"
     >
       <div className="w-3/4 ">

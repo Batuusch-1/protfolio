@@ -16,10 +16,10 @@ export const GetInTouch = () => {
             <div className="">
               {" "}
               <img src="/messege-logo.png" alt=""/>
-              <h1 className="text-4xl" >Reachsagarshah@gmail.com</h1> <img src="/2icon.png" alt="" />
+              <h1 className="sm:text-4xl text-2xl" >Reachsagarshah@gmail.com</h1> <img src="/2icon.png" alt="" />
             </div>
             <div>
-              <img src="/phone.png" alt="" /> <h1 className="text-4xl ">+91 8980500565</h1>{" "}
+              <img src="/phone.png" alt="" /> <h1 className="sm:text-4xl text-2xl">+91 8980500565</h1>{" "}
               <img src="/2icon.png" alt="" />
             </div>
             <p>You may also find me on these platforms!</p>

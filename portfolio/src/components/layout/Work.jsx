@@ -1,4 +1,4 @@
-export const Work = () => {
+export const Work = (props) => {
   const arr = [
     "React",
     "Next.js",
@@ -15,7 +15,7 @@ export const Work = () => {
     <div className="container flex justify-center py-5">
       <div className="w-3/4">
         <div className="w-full flex justify-center py-10">
-          <span className=" bg-gray-400 w-auto rounded-3xl px-4 py-1 ">
+          <span ref={props.a} className=" bg-gray-400 w-auto rounded-3xl px-4 py-1 ">
             Work
           </span>
         </div>

@@ -15,3 +15,29 @@ export default function Home() {
     </div>
   );
 }
+import { useState } from "react";
+import styles from "@/styles/Home.module.css";
+export const Toggle = () => {
+  let [toggle, setToggle] = useState(true);
+  const useToggle = () => {
+    setToggle(!toggle);
+  };
+  if (toggle) {
+    return (
+      <div>
+        <button onClick={useToggle} className={styles.toggle}>
+          ON
+        </button>
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <button onClick={useToggle} className={styles.toggle2}>
+          OFF
+        </button>
+      </div>
+    );
+  }
+};
+
