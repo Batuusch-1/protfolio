@@ -32,8 +32,6 @@ export const Header = (props) => {
               showSideBar && "bg-black"
             }  bg-opacity-30 w-[100vw] h-[100vh] absolute left-0 top-0 transition-all duration-300  ease-in-out`}
           ></div>
-
-          {/* Side barnii tsagaan contenttei heseg */}
           <div className="absolute top-0 right-0 overflow-hidden w-[70vw] h-[100vh]">
             <div
               className={`bg-white h-[100vh] w-[100%] p-5 absolute top-0 right-0 ${
@@ -54,19 +52,22 @@ export const Header = (props) => {
                 <p onClick={props.handleClick2}>Work</p>
                 <p onClick={props.handleClick3}>Testimonials</p>
                 <p onClick={props.handleClick4}>Contact</p>
+                <div className="flex justify-between">
+                  <h1>Switch theme</h1> <img src="/sun.png" alt="" />
+                </div>
+                <div className="sm:block hidden">
+                  {" "}
+                  <img
+                    src="/sun.png"
+                    alt=""
+                    className="cursor-pointer sm:max-w-10"
+                  />
+                </div>
                 <div className="flex gap-4 justify-between  ">
-                  <div className="sm:block hidden">
-                    {" "}
-                    <img
-                      src="/sun.png"
-                      alt=""
-                      className="cursor-pointer sm:max-w-10"
-                    />
-                  </div>
                   <div className="m-auto">
-                    <div 
+                    <div
                       onClick={() => download(fileUrl, filename)}
-                      className=" bg-zinc-900 w-40 rounded-3xl text-white text-center cursor-pointer"
+                      className=" bg-zinc-900 w-40 rounded-3xl text-white text-center cursor-pointer py-1 px-2"
                     >
                       Download CV
                     </div>
