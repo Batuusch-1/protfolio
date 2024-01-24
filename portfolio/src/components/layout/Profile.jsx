@@ -33,7 +33,7 @@ export const Profile = () => {
         </div>
         <div className=" w-full flex justify-center">
           <div className="w-2/3 ">
-            <img src="/Pic 2.png" alt="" className="w-full shadow1" />
+            <img src="/Pic 2.png" alt="" className="lg:max-w-[400px] sm:max-w-[200px] shadow1" />
           </div>
         </div>
       </div>
