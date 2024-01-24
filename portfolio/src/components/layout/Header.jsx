@@ -6,49 +6,73 @@ export const Header = (props) => {
   const fileUrl = "/2icon.png";
   const filename = "beautiful-carpathia.png";
   const [showMenu, setShowMenu] = useState(false);
-  const toggleMenu = () => {
+  const [showSideBar, setshowSideBar] = useState(false);
+
+  const handleOpen = () => {
     setShowMenu(!showMenu);
+
+    setTimeout(() => {
+      setshowSideBar(!showSideBar);
+    }, 10);
+  };
+
+  const handleClose = () => {
+    setshowSideBar(!showSideBar);
+    setTimeout(() => {
+      setShowMenu(!showMenu);
+    }, 400);
   };
   return (
     <div>
       {showMenu && (
         <div>
           <div
-            onClick={toggleMenu}
-            className="bg-black bg-opacity-30 w-[100vw] h-[100vh] absolute left-0 top-0 flex justify-end"
+            onClick={handleClose}
+            className={` ${
+              showSideBar && "bg-black"
+            }  bg-opacity-30 w-[100vw] h-[100vh] absolute left-0 top-0 transition-all duration-300  ease-in-out`}
           ></div>
-          <div className="bg-white h-[100vh] w-[85%] p-5 absolute top-0 right-0 ">
-            <div className="flex justify-between p-5">
-              <h1 className="text-4xl">{`<SS/>`}</h1>
-              <button onClick={toggleMenu} className="text-4xl">
-                X
-              </button>
-            </div>
-            <p className="text-2xl px-4 py-2 " onClick={props.handleClick1}>
-              About
-            </p>
-            <p className="text-2xl px-4 py-2" onClick={props.handleClick2}>
-              Work
-            </p>
-            <p className="text-2xl px-4 py-2" onClick={props.handleClick3}>
-              Testimonials
-            </p>
-            <p className="text-2xl px-4 py-2" onClick={props.handleClick4}>
-              Contact
-            </p>
-            <div className="flex gap-14 py-2">
-              <p className="text-2xl px-4">Switch theme</p>{" "}
-              <img
-                src="/sun.png"
-                alt=""
-                className="cursor-pointer sm:max-w-auto py-2"
-              />
-            </div>
+
+          {/* Side barnii tsagaan contenttei heseg */}
+          <div className="absolute top-0 right-0 overflow-hidden w-[70vw] h-[100vh]">
             <div
-              onClick={() => download(fileUrl, filename)}
-              className="m-auto py-1 bg-zinc-900 w-40 rounded-3xl text-white text-center sm:block  cursor-pointer"
+              className={`bg-white h-[100vh] w-[100%] p-5 absolute top-0 right-0 ${
+                showSideBar ? "translate-x-0" : "translate-x-[100vw]"
+              } transition-all duration-300  ease-in-out`}
             >
-              Download CV
+              <div className="flex justify-between">
+                <h2 className=" text-2xl block cursor-pointer"> {"<SS/>"} </h2>
+                <button
+                  onClick={handleClose}
+                  className="h-[40px] w-[40px] border-red-300 rounded-md border-[2px]"
+                >
+                  X
+                </button>
+              </div>
+              <div className="*:cursor-pointer *:py-2 *:text-2xl">
+                <p onClick={props.handleClick1}>About</p>
+                <p onClick={props.handleClick2}>Work</p>
+                <p onClick={props.handleClick3}>Testimonials</p>
+                <p onClick={props.handleClick4}>Contact</p>
+                <div className="flex gap-4 justify-between  ">
+                  <div className="sm:block hidden">
+                    {" "}
+                    <img
+                      src="/sun.png"
+                      alt=""
+                      className="cursor-pointer sm:max-w-10"
+                    />
+                  </div>
+                  <div className="m-auto">
+                    <div 
+                      onClick={() => download(fileUrl, filename)}
+                      className=" bg-zinc-900 w-40 rounded-3xl text-white text-center cursor-pointer"
+                    >
+                      Download CV
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -85,7 +109,7 @@ export const Header = (props) => {
                     src="/3tseg.png"
                     alt=""
                     className=" cursor-pointer"
-                    onClick={toggleMenu}
+                    onClick={handleOpen}
                   />
                 </div>
               </div>
