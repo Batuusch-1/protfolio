@@ -23,3 +23,50 @@
   @apply sm: shadow2;
 } */
 
+/* <div>
+{showMenu && (
+  <div className="">
+    <div
+      onClick={toggleMenu}
+      className="bg-black bg-opacity-30 w-[100vw] h-[100vh] absolute left-0 top-0 flex justify-end"
+    ></div>
+    <div className="absolute top-0 right-0 overflow-hidden w-[70vw] h-[100vh]">
+      <div className={`bg-white h-[100vh] w-[100%] p-5 absolute top-0 right-0 ${
+          sideBar ? "translate-x-0" : "translate-x-[100vw]"
+        } transition-all duration-300  ease-in-out`}>
+        <div className="flex justify-between p-5">
+          <h1 className="text-4xl">{`<SS/>`}</h1>
+          <button onClick={toggleMenu} className="text-4xl">
+            X
+          </button>
+        </div>
+        <p className="text-2xl px-4 py-2 " onClick={props.handleClick1}>
+          About
+        </p>
+        <p className="text-2xl px-4 py-2" onClick={props.handleClick2}>
+          Work
+        </p>
+        <p className="text-2xl px-4 py-2" onClick={props.handleClick3}>
+          Testimonials
+        </p>
+        <p className="text-2xl px-4 py-2" onClick={props.handleClick4}>
+          Contact
+        </p>
+        <div className="flex gap-14 py-2">
+          <p className="text-2xl px-4">Switch theme</p>{" "}
+          <img
+            src="/sun.png"
+            alt=""
+            className="cursor-pointer sm:max-w-auto py-2"
+          />
+        </div>
+        <div
+          onClick={() => download(fileUrl, filename)}
+          className="m-auto py-1 bg-zinc-900 w-40 rounded-3xl text-white text-center sm:block  cursor-pointer"
+        >
+          Download CV
+        </div>
+      </div>
+    </div>
+  </div>
+)} */

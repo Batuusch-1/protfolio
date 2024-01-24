@@ -16,8 +16,8 @@ export const Header = (props) => {
           <div
             onClick={toggleMenu}
             className="bg-black bg-opacity-30 w-[100vw] h-[100vh] absolute left-0 top-0 flex justify-end"
-          ></div> 
-          <div className="bg-white h-[100vh] w-[85%] p-5 absolute top-0 right-0">
+          ></div>
+          <div className="bg-white h-[100vh] w-[85%] p-5 absolute top-0 right-0 ">
             <div className="flex justify-between p-5">
               <h1 className="text-4xl">{`<SS/>`}</h1>
               <button onClick={toggleMenu} className="text-4xl">
