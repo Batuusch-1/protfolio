@@ -1,10 +1,22 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import useDownloader from "react-use-downloader";
 export const Header = (props) => {
+  // ------------------------------------------------------------------------
+  const [isDarkMode, setDarkMode] = useState(false);
+  useEffect(() => {
+    const isDark = localStorage.getItem("darkMode") === "true";
+    setDarkMode(isDark);
+  }, []);
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", isDarkMode);
+    localStorage.setItem("darkMode", isDarkMode);
+  }, [isDarkMode]);
+  // ------------------------------------------------------------------------
   const { size, elapsed, percentage, download, cancel, error, isInProgress } =
     useDownloader();
   const fileUrl = "/2icon.png";
   const filename = "beautiful-carpathia.png";
+  // ------------------------------------------------------------------------
   const [showMenu, setShowMenu] = useState(false);
   const [showSideBar, setshowSideBar] = useState(false);
 
@@ -21,6 +33,7 @@ export const Header = (props) => {
     setTimeout(() => {
       setShowMenu(!showMenu);
     }, 400);
+    // ------------------------------------------------------------------------
   };
   return (
     <div>
@@ -42,7 +55,7 @@ export const Header = (props) => {
                 <h2 className=" text-2xl block cursor-pointer"> {"<SS/>"} </h2>
                 <button
                   onClick={handleClose}
-                  className="h-[40px] w-[40px] border-red-300 rounded-md border-[2px]"
+                  className="h-[40px] w-[40px] border-black-300 rounded-md border-[2px]"
                 >
                   X
                 </button>
@@ -52,22 +65,21 @@ export const Header = (props) => {
                 <p onClick={props.handleClick2}>Work</p>
                 <p onClick={props.handleClick3}>Testimonials</p>
                 <p onClick={props.handleClick4}>Contact</p>
-                <div className="flex justify-between">
+                <div
+                  className="flex justify-between"
+                  onClick={() => setDarkMode((prevState) => !prevState)}
+                >
                   <h1>Switch theme</h1> <img src="/sun.png" alt="" />
                 </div>
                 <div className="sm:block hidden">
                   {" "}
-                  <img
-                    src="/sun.png"
-                    alt=""
-                    className="cursor-pointer sm:max-w-10"
-                  />
+                  <img src="/sun.png" alt="" className="cursor-pointer " />
                 </div>
                 <div className="flex gap-4 justify-between  ">
                   <div className="m-auto">
                     <div
                       onClick={() => download(fileUrl, filename)}
-                      className=" bg-zinc-900 w-40 rounded-3xl text-white text-center cursor-pointer py-1 px-2"
+                      className="dark:bg-white dark:text-white bg-zinc-900 w-40 rounded-3xl text-white text-center cursor-pointer py-1 px-2 "
                     >
                       Download CV
                     </div>
@@ -95,12 +107,15 @@ export const Header = (props) => {
                   src="/sun.png"
                   alt=""
                   className="cursor-pointer sm:max-w-10"
+                  onClick={() => setDarkMode((prevState) => !prevState)}
                 />
               </div>
               <div>
                 <div
                   onClick={() => download(fileUrl, filename)}
-                  className=" bg-zinc-900 w-40 rounded-3xl text-white text-center sm:block hidden cursor-pointer"
+                  className="dark:bg-white dark:texy-while (condition) {
+                    
+                  } bg-zinc-900 w-40 rounded-3xl dark:text-black text-white text-center sm:block hidden cursor-pointer"
                 >
                   Download CV
                 </div>

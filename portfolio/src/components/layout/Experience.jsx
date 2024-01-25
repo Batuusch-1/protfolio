@@ -30,7 +30,7 @@ export const Experience = (props) => {
   ];
   return (
     <div ref={props.a}
-      className="container flex justify-center py-5 bg-gray-100"
+      className="container flex justify-center py-5  dark:bg-gray-600 bg-gray-100"
     >
       <div className="w-3/4 ">
         <div className="w-full flex justify-center py-20">
@@ -45,11 +45,11 @@ export const Experience = (props) => {
         </div>
         <div>
           {arr.map((el) => (
-            <div className="sm:flex bg-white  justify-around m-14 sm:py-5 rounded-lg shadow-xl  p-2 ">
+            <div className="sm:flex  dark:bg-gray-600 bg-white  justify-around m-14 sm:py-5 rounded-lg shadow-xl  p-2 ">
               <div>
                 <img src={el.logo} alt="" className="py-2" />{" "}
               </div>
-              <div>
+              <div className="">
                 <h1>{el.title}</h1>
                 <li>{el.content1}</li>
                 <li>{el.content2}</li>

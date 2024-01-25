@@ -8,8 +8,9 @@ import {
   GetInTouch,
   Footer,
 } from "@/components/layout";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 export default function Home() {
+
   const about = useRef(null);
   const work = useRef(null);
   const Testimonials = useRef(null);
@@ -31,13 +32,14 @@ export default function Home() {
     console.log("4");
   };
   return (
-    <div className="contianer flex justify-center">
+    <div className=" flex justify-center">
       <div className="container">
         <Header
           handleClick1={handleClick1}
           handleClick2={handleClick2}
           handleClick3={handleClick3}
           handleClick4={handleClick4}
+       
         />
         <Profile />
         <About a={about} />

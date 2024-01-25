@@ -1,7 +1,7 @@
 export const About = (props) => {
   // console.log(props.ref);
   return (
-    <div className="container flex justify-center py-5 bg-gray-100">
+    <div className="container flex justify-center py-5 dark:bg-gray-600 bg-gray-100">
       <div className="w-3/4">
         <div ref={props.a} className="w-full flex justify-center py-20">
           <span className=" bg-gray-400 w-auto rounded-3xl px-3 py-1 ">
