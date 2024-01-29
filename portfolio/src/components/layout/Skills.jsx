@@ -21,7 +21,7 @@ export const Skills = (props) => {
   ];
 
   return (
-    <div ref={props.a} className="container flex justify-center py-5">
+    <div ref={props.a} className=" flex justify-center py-5">
       <div className="w-3/4">
         <div className="w-full flex justify-center py-10">
           <span className=" bg-gray-400 w-auto rounded-3xl px-4 py-1 ">

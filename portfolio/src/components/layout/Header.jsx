@@ -47,7 +47,7 @@ export const Header = (props) => {
           ></div>
           <div className="absolute top-0 right-0 overflow-hidden w-[70vw] h-[100vh]">
             <div
-              className={`bg-white h-[100vh] w-[100%] p-5 absolute top-0 right-0 ${
+              className={ `dark:bg-gray-600 bg-white h-[100vh] w-[100%] p-5 absolute top-0 right-0 ${
                 showSideBar ? "translate-x-0" : "translate-x-[100vw]"
               } transition-all duration-300  ease-in-out`}
             >
@@ -79,7 +79,7 @@ export const Header = (props) => {
                   <div className="m-auto">
                     <div
                       onClick={() => download(fileUrl, filename)}
-                      className="dark:bg-white dark:text-white bg-zinc-900 w-40 rounded-3xl text-white text-center cursor-pointer py-1 px-2 "
+                      className="dark:bg-white dark:text-black bg-zinc-900 w-40 rounded-3xl text-white text-center cursor-pointer py-1 px-2 "
                     >
                       Download CV
                     </div>
@@ -90,10 +90,11 @@ export const Header = (props) => {
           </div>
         </div>
       )}
-      <div className="w-full flex justify-center">
+      <div className=" flex justify-center">
+        <div className="flex w-3/4 justify-center">
         <div className=" flex justify-between w-3/4 py-10">
           <div className=" text-2xl block cursor-pointer"> {"<SS/>"} </div>
-          <div className=" flex justify-around sm:w-2/4 ">
+          <div className=" flex justify-around  ">
             <div className=" sm:flex sm:gap-7 hidden *:cursor-pointer ">
               <p onClick={props.handleClick1}>About</p>
               <p onClick={props.handleClick2}>Work</p>
@@ -132,6 +133,7 @@ export const Header = (props) => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

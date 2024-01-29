@@ -29,36 +29,39 @@ export const Experience = (props) => {
     },
   ];
   return (
-    <div ref={props.a}
-      className="container flex justify-center py-5  dark:bg-gray-600 bg-gray-100"
+    <div
+      ref={props.a}
+      className=" flex justify-center py-5  dark:bg-gray-600 bg-gray-100"
     >
-      <div className="w-3/4 ">
-        <div className="w-full flex justify-center py-20">
-          <span className=" bg-gray-400 w-auto rounded-3xl px-3 py-1 ">
-            Experience
-          </span>
-        </div>
-        <div className="w-full flex justify-center ">
-          <p className=" text-2xl p-2">
-            Some of the noteworthy projects I have built:
-          </p>
-        </div>
-        <div>
-          {arr.map((el) => (
-            <div className="sm:flex  dark:bg-gray-600 bg-white  justify-around m-14 sm:py-5 rounded-lg shadow-xl  p-2 ">
-              <div>
-                <img src={el.logo} alt="" className="py-2" />{" "}
+      <div className="flex w-3/4 justify-center">
+        <div className="w-3/4 ">
+          <div className="w-full flex justify-center py-20">
+            <span className=" bg-gray-400 w-auto rounded-3xl px-3 py-1 ">
+              Experience
+            </span>
+          </div>
+          <div className="w-full flex justify-center ">
+            <p className=" text-2xl p-2">
+              Some of the noteworthy projects I have built:
+            </p>
+          </div>
+          <div>
+            {arr.map((el) => (
+              <div className="sm:flex  dark:bg-gray-600 bg-white  justify-around m-14 sm:py-5 rounded-lg shadow-xl  p-2 ">
+                <div>
+                  <img src={el.logo} alt="" className="py-2" />{" "}
+                </div>
+                <div className="">
+                  <h1>{el.title}</h1>
+                  <li>{el.content1}</li>
+                  <li>{el.content2}</li>
+                  <li>{el.content3}</li>
+                  <li>{el.content4}</li>
+                </div>
+                <div>{el.date}</div>
               </div>
-              <div className="">
-                <h1>{el.title}</h1>
-                <li>{el.content1}</li>
-                <li>{el.content2}</li>
-                <li>{el.content3}</li>
-                <li>{el.content4}</li>
-              </div>
-              <div>{el.date}</div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>

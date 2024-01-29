@@ -33,7 +33,7 @@ export default function Home() {
   };
   return (
     <div className=" flex justify-center">
-      <div className="container">
+      <div className="w-[100vw]">
         <Header
           handleClick1={handleClick1}
           handleClick2={handleClick2}
